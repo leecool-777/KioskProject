@@ -1,51 +1,50 @@
 package basic.lv4;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Kiosk {
-    //속성
-    private List<MenuItem> menuItems;
+    private List<Menu> menus;
 
-    //생성자
-
-    public Kiosk(List<MenuItem> menuItems) {
-        this.menuItems = menuItems;
+    public Kiosk() {
+        this.menus = new ArrayList<>();
     }
 
-    //기능
+
+    public void addMenu(Menu menu) {
+        menus.add(menu);
+    }
+
     public void start() {
         Scanner scanner = new Scanner(System.in);
 
-        int option;
+        System.out.println("[ MAIN MENU ]");
+        for (int i = 0; i < menus.size(); i++) {
+            System.out.println((i + 1) + ". " + menus.get(i).getCategoryName());
+        }
+        System.out.println("0. 종료");
+
         while (true) {
-            for (int i = 0; i < menuItems.size(); i++) {
-                System.out.print(i + 1);
-                System.out.println(". " + menuItems.get(i));
-                if (i == menuItems.size() - 1) {
-                    System.out.println("0. 종료");
-                    System.out.println("===================================================================");
-                }
+
+            int inputMenu = scanner.nextInt();
+
+            if (inputMenu == 0) {
+                break;
+            } else if (inputMenu == 1) {
+                showItemsOf(menus.get(0));
+            } else if (inputMenu == 2) {
+                showItemsOf((menus.get(1)));
             }
-            System.out.print("번호를 입력하세요: ");
-            option = scanner.nextInt();
-            if (option == 0) {
-                System.out.println("키오스크를 종료합니다.");
-                break;
-            } else if (option == 1) {
-                System.out.println(menuItems.get(0));
-                break;
-            } else if (option == 2) {
-                System.out.println(menuItems.get(1));
-            } else if (option == 3) {
-                System.out.println(menuItems.get(2));
-                break;
-            } else if (option == 4) {
-                System.out.println(menuItems.get(3));
-                break;
-            } else {
-                System.out.println("유효하지 않은 입력입니다.");
-            }
+
         }
     }
+
+    public void showItemsOf(Menu menu) {
+        System.out.println("[ " + menu.getCategoryName() + " MENU ]");
+        menu.getMenuItems();
+
+    }
 }
+
+
