@@ -19,14 +19,14 @@ public class Kiosk {
 
         int option;
         while (true) {
+            System.out.println("\n[ SHAKESHACK MENU ]");
             for (int i = 0; i < menuItems.size(); i++) {
                 System.out.print(i + 1);
                 System.out.println(". " + menuItems.get(i));
-                if (i == menuItems.size() - 1) {
-                    System.out.println("0. 종료");
-                    System.out.println("===================================================================");
-                }
             }
+            System.out.println("0. 종료");
+            System.out.println("===================================================================");
+
             System.out.print("번호를 입력하세요: ");
             option = scanner.nextInt();
             if (option == 0) {
@@ -34,15 +34,12 @@ public class Kiosk {
                 break;
             } else if (option == 1) {
                 System.out.println(menuItems.get(0));
-                break;
             } else if (option == 2) {
                 System.out.println(menuItems.get(1));
             } else if (option == 3) {
                 System.out.println(menuItems.get(2));
-                break;
             } else if (option == 4) {
                 System.out.println(menuItems.get(3));
-                break;
             } else {
                 System.out.println("유효하지 않은 입력입니다.");
             }
