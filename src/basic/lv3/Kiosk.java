@@ -17,7 +17,7 @@ public class Kiosk {
     public void start() {
         Scanner scanner = new Scanner(System.in);
 
-        int option;
+
         while (true) {
             System.out.println("\n[ SHAKESHACK MENU ]");
             for (int i = 0; i < menuItems.size(); i++) {
@@ -28,7 +28,7 @@ public class Kiosk {
             System.out.println("===================================================================");
 
             System.out.print("번호를 입력하세요: ");
-            option = scanner.nextInt();
+            int option = scanner.nextInt();
             if (option == 0) {
                 System.out.println("키오스크를 종료합니다.");
                 break;

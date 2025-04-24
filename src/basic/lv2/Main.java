@@ -15,7 +15,7 @@ public class Main {
         burgers.add(new MenuItem("Hamburger", 5.4, "비프패티를 기반으로 야채가 들어간 기본버거"));
 
         Scanner scanner = new Scanner(System.in);
-        int option;
+
         while (true) {
             for (int i = 0; i < burgers.size(); i++) {
                 System.out.print(i + 1);
@@ -26,7 +26,7 @@ public class Main {
                 }
             }
             System.out.print("번호를 입력하세요: ");
-            option = scanner.nextInt();
+            int option = scanner.nextInt();
             if (option == 0) {
                 System.out.println("키오스크를 종료합니다.");
                 break;
