@@ -14,6 +14,19 @@ public class MenuItem {
     }
 
     //기능
+
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getInfo() {
+        return info;
+    }
+
     @Override
     public String toString() {
         return String.format("%-15s | W %1f | %s",name,price,info);
