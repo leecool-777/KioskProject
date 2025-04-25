@@ -1,5 +1,6 @@
 package advanced.lv5;
 
+import javax.management.RuntimeErrorException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -24,15 +25,24 @@ public class Kiosk {
             if (inputMenu == 0) {
                 break;
             }
+            if (order.isEmpty() && inputMenu > menus.size()) {
+                System.out.println("잘못 입력하셨습니다.");
+                continue;
+            }
+            Menu selectedMenu = menus.get(inputMenu - 1);
+            displayMenuItem(selectedMenu);
+            int inputItem = scanner.nextInt();
+
+            //To do
+
+
         }
-
-
     }
 
     private void displayMainMenu() {
         System.out.println("[ MAIN MENU ]");
         for (int i = 0; i < menus.size(); i++) {
-            System.out.println((i+1) + ". "+ menus.get(i).getCategory());
+            System.out.println((i + 1) + ". " + menus.get(i).getCategory());
         }
         System.out.println("0. 종료");
         if (!order.isEmpty()) {
@@ -41,6 +51,9 @@ public class Kiosk {
             System.out.println("5. Cancel       | 진행중인 주문을 취소합니다.");
         }
         System.out.println("===============================================================");
+    }
 
+    private void displayMenuItem(Menu menu) {
+        menu.displayMenuItem(menu);
     }
 }
