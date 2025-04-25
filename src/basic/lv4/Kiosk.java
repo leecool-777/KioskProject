@@ -52,11 +52,11 @@ public class Kiosk {
             System.out.println("0. 뒤로가기");
             System.out.println("===================================================================");
             System.out.print("상품을 선택해주세요: ");
-            int choseItem = scanner.nextInt();
-            if (choseItem == 0) {
+            int selectedItem = scanner.nextInt();
+            if (selectedItem == 0) {
                 return;
-            } else if (choseItem > 0 && choseItem <= menu.menuSize()) {
-                System.out.println("선택한 상품: " + menu.getMenuItem(choseItem));
+            } else if (selectedItem > 0 && selectedItem <= menu.menuSize()) {
+                System.out.println("선택한 상품: " + menu.getMenuItem(selectedItem));
                 System.out.println("===================================================================");
                 return;
             }
