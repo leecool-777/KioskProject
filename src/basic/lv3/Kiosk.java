@@ -21,8 +21,7 @@ public class Kiosk {
         while (true) {
             System.out.println("\n[ SHAKESHACK MENU ]");
             for (int i = 0; i < menuItems.size(); i++) {
-                System.out.print(i + 1);
-                System.out.println(". " + menuItems.get(i));
+                System.out.println((i + 1) + ". " + menuItems.get(i));
             }
             System.out.println("0. 종료");
             System.out.println("===================================================================");
