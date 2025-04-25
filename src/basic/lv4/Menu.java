@@ -29,7 +29,7 @@ public class Menu {
         return categoryName;
     }
 
-    public int menuSize() {
+    public int getMenuSize() {
         return menuItems.size();
     }
 

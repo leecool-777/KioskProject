@@ -55,7 +55,7 @@ public class Kiosk {
             int selectedItem = scanner.nextInt();
             if (selectedItem == 0) {
                 return;
-            } else if (selectedItem > 0 && selectedItem <= menu.menuSize()) {
+            } else if (selectedItem > 0 && selectedItem <= menu.getMenuSize()) {
                 System.out.println("선택한 상품: " + menu.getMenuItem(selectedItem));
                 System.out.println("===================================================================");
                 return;
