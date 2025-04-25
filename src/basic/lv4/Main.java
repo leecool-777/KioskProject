@@ -14,10 +14,15 @@ public class Main {
         beverageMenu.addItem(new MenuItem("Coke", 1.0, "콜라"));
         beverageMenu.addItem(new MenuItem("Sprite", 1.0, "스프라이트"));
 
+        Menu desserts = new Menu("DESSERTS");
+        desserts.addItem(new MenuItem("Potato", 2.0, "감자튀김"));
+        desserts.addItem(new MenuItem("Salad", 1.0, "샐러드"));
+
 
         Kiosk kiosk = new Kiosk();
         kiosk.addMenu(burgerMenu);
         kiosk.addMenu(beverageMenu);
+        kiosk.addMenu(desserts);
 
 
         kiosk.start();
