@@ -12,6 +12,7 @@ public class Order {
     //생성자
     public Order() {
         this.orders = new ArrayList<>();
+        this.quantity = 0;
         this.totalPrice = 0;
     }
 
@@ -19,6 +20,7 @@ public class Order {
     public void addOrder(MenuItem item) {
         orders.add(item);
         totalPrice += item.getPrice();
+        quantity++;
     }
 
     public boolean isEmpty() {
@@ -32,5 +34,14 @@ public class Order {
         }
         System.out.println("\n[ TOTAL ]");
         System.out.println("W "+ totalPrice);
+    }
+
+    public double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void removeAllOrders() {
+        orders.clear();
+        this.totalPrice = 0;
     }
 }
