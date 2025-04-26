@@ -33,9 +33,9 @@ public class Main {
         menus.add(new Menu("DESSERTS", desserts));
 
 
-        Order order = new Order();
+        Cart cart = new Cart();
 
-        Kiosk kiosk = new Kiosk(menus, order, scanner);
+        Kiosk kiosk = new Kiosk(menus, cart, scanner);
         kiosk.start();
 
     }
