@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Menu {
     //속성
-    private String category;
-    private List<MenuItem> menuItems;
+    private final String category;
+    private final List<MenuItem> menuItems;
 
     //생성자
 
@@ -25,11 +25,5 @@ public class Menu {
 
     public int getMenuSize() {
         return menuItems.size();
-    }
-
-    public void displayCategoryMenu() {
-        for (int i = 0; i < menuItems.size(); i++) {
-            System.out.println((i+1) + ". " + menuItems.get(i));
-        }
     }
 }
