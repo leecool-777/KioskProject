@@ -2,9 +2,9 @@ package advanced.lv5;
 
 public class MenuItem {
     //속성
-    private String name;
-    private double price;
-    private String info;
+    private final String name;
+    private final double price;
+    private final String info;
 
     //생성자
     public MenuItem(String name, double price, String info) {
