@@ -23,7 +23,7 @@ public class Cart {
         quantity++;
     }
 
-    public boolean isEmpty() {
+    public boolean isOrderEmpty() {
         return orders.isEmpty();
     }
 
