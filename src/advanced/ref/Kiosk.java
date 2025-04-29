@@ -6,21 +6,22 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Kiosk {
-    private static final int ORDER_MENU = 4;
-    private static final int CANCEL_MENU = 5;
-
+    //속성
     private final List<Menu> menus;
     private final Cart cart;
     private final Scanner scanner;
 
-
+    //생성자
     public Kiosk(List<Menu> menus, Cart cart, Scanner scanner) {
         this.menus = menus;
         this.cart = cart;
         this.scanner = scanner;
     }
 
+    //기능
     public void start() {
+        int orderMenuNum = menus.size() + 1;
+        int cancelOrderNum = menus.size() + 2;
         while (true) {
             displayMainMenu();
             try {
@@ -28,7 +29,7 @@ public class Kiosk {
                 if (userMenuChoice == 0) {
                     break;
                 }
-                if (!cart.isEmpty() && userMenuChoice == ORDER_MENU || userMenuChoice == CANCEL_MENU) {
+                if (!cart.isEmpty() && userMenuChoice == orderMenuNum || userMenuChoice == cancelOrderNum) {
                     handleOrderMenu(userMenuChoice);
                     continue;
                 }
@@ -61,8 +62,8 @@ public class Kiosk {
         System.out.println("0. 종료");
         if (!cart.isEmpty()) {
             System.out.println("[ ORDER MENU ]");
-            System.out.println("4. Orders       | 장바구니를 확인 후 주문합니다.");
-            System.out.println("5. Cancel       | 진행중인 주문을 취소합니다.");
+            System.out.println((menus.size()+1) +". Orders       | 장바구니를 확인 후 주문합니다.");
+            System.out.println((menus.size()+2) + ". Cancel       | 진행중인 주문을 취소합니다.");
         }
         printSeparator();
         System.out.print("입력: ");
@@ -79,14 +80,11 @@ public class Kiosk {
     }
 
     private void handleOrderMenu(int userChoiceMenu) {
-        switch (userChoiceMenu) {
-            case ORDER_MENU:
-                printOrderMenu();
-                confirmOrder();
-                break;
-            case CANCEL_MENU:
-                confirmClearCart();
-                break;
+        if (userChoiceMenu == menus.size() + 1) {
+            printOrderMenu();
+            confirmOrder();
+        } else if (userChoiceMenu == menus.size() + 2) {
+            confirmClearCart();
         }
     }
 
