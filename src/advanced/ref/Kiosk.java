@@ -34,14 +34,11 @@ public class Kiosk {
                 }
                 Menu selectedMenu = menus.get(userMenuChoice - 1);
 
-
                 if (0 < userMenuChoice && userMenuChoice <= menus.size()) {
                     displayMenuItem(selectedMenu);
                 }
 
-                int userItemChoice = scanner.nextInt();
-
-                MenuItem selectedItem = selectedMenu.getMenuItem(userItemChoice - 1);
+                MenuItem selectedItem = selectedMenu.getMenuItem(scanner.nextInt() - 1);
 
                 System.out.println("선택한 메뉴: " + selectedItem);
 
@@ -111,8 +108,7 @@ public class Kiosk {
     private void confirmOrder() {
         System.out.println("\n위와같이 주문하시겠습니까?\n1. 주문        2. 메뉴판");
         System.out.print("입력: ");
-        int userOrderChoice = scanner.nextInt();
-        switch (userOrderChoice) {
+        switch (scanner.nextInt()) {
             case 1 -> {
                 System.out.println("\n주문이 완료되었습니다. 결제금액은 W " + cart.getTotalPrice() + " 입니다.\n");
                 printSeparator();
@@ -135,8 +131,7 @@ public class Kiosk {
     private void confirmAddToCart(MenuItem selectedItem) {
         System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?\n1. 확인        2. 취소");
         System.out.print("입력: ");
-        int yesOrNo = scanner.nextInt();
-        switch (yesOrNo) {
+        switch (scanner.nextInt()) {
             case 1:
                 cart.addItem(selectedItem);
                 System.out.println(selectedItem.getName() + "이(가) 장바구니에 추가되었습니다.\n");
