@@ -6,28 +6,21 @@ import java.util.Set;
 
 public class Cart {
 
-    private Map<MenuItem, Integer> cartItems;
-    private int totalQuantity;
+    private final Map<MenuItem, Integer> cartItems;
     private double totalPrice;
 
     public Cart() {
         this.cartItems = new HashMap<>();
-        this.totalQuantity = 0;
         this.totalPrice = 0;
     }
 
     public void addItem(MenuItem menuItem) {
         cartItems.put(menuItem, cartItems.getOrDefault(menuItem, 0) + 1);
-        totalQuantity++;
         totalPrice += menuItem.getPrice();
     }
 
     public Set<MenuItem> getCartItems() {
         return cartItems.keySet();
-    }
-
-    public int getTotalQuantity() {
-        return totalQuantity;
     }
 
     public double getTotalPrice() {
@@ -44,7 +37,6 @@ public class Cart {
 
     public void clearCart() {
         cartItems.clear();
-        totalQuantity = 0;
         totalPrice = 0;
     }
 }

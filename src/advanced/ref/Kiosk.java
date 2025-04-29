@@ -9,9 +9,9 @@ public class Kiosk {
     private static final int ORDER_MENU = 4;
     private static final int CANCEL_MENU = 5;
 
-    private List<Menu> menus;
-    private Cart cart;
-    private Scanner scanner;
+    private final List<Menu> menus;
+    private final Cart cart;
+    private final Scanner scanner;
 
 
     public Kiosk(List<Menu> menus, Cart cart, Scanner scanner) {
