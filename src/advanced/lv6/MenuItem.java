@@ -3,11 +3,11 @@ package advanced.lv6;
 public class MenuItem {
     //속성
     private final String name;
-    private final double price;
+    private final int price;
     private final String info;
 
     //생성자
-    public MenuItem(String name, double price, String info) {
+    public MenuItem(String name, int price, String info) {
         this.name = name;
         this.price = price;
         this.info = info;
@@ -18,7 +18,7 @@ public class MenuItem {
         return name;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 
