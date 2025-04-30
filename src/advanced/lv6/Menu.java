@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Menu {
     //속성
-    private String category;
-    private List<MenuItem> menuItemList;
+    private final String category;
+    private final List<MenuItem> menuItemList;
 
     //생성자
 
@@ -20,7 +20,11 @@ public class Menu {
         return category;
     }
 
-    public List<MenuItem> getMenuItemList() {
-        return menuItemList.stream().toList();
+    public int getListSize() {
+        return menuItemList.size();
+    }
+
+    public MenuItem getMenuItem(int i) {
+        return menuItemList.get(i);
     }
 }

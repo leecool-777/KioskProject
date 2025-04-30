@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class Cart {
     //속성
-    private Map<MenuItem, Integer> cartItems;
+    private final Map<MenuItem, Integer> cartItems;
     private int totalQuantity;
     private int totalPrice;
 
@@ -28,7 +28,7 @@ public class Cart {
         return totalQuantity;
     }
 
-    public double getTotalPrice() {
+    public int getTotalPrice() {
         return totalPrice;
     }
     public boolean isEmpty() {
