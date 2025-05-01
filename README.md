@@ -1,12 +1,10 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6&height=300&text=[JAVA]%20Kiosk%20Project&fontColor=eae1ff&fontSize=45&animation=twinkling&fontAlign=52&fontAlignY=36)
+![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6&height=300&text=[JAVA]%20Kiosk%20Project&fontSize=45&animation=twinkling&fontAlign=52&fontAlignY=36)
 
 # 📌키오스크 프로젝트
-___
 
 ## 📚목차
 
----
-### [1.📘프로젝트 소개](#프로젝트-소개)
+### [1. 📘프로젝트 소개](#프로젝트-소개)
 
 ### [2. 🛠️개발 환경](#개발-환경)
 
@@ -19,9 +17,14 @@ ___
 ### [6. ☕블로그](#블로그)
 
 
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
 # 📘프로젝트 소개
 
----
 ### 1️⃣ 객체 지향 설계를 적용해 순서 제어를 클래스로 정의
 
 ### 2️⃣ 음식 메뉴와 주문 내역을 클래스 기반으로 관리
