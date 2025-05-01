@@ -35,10 +35,6 @@ public class Cart {
         return cartItems.isEmpty();
     }
 
-    public int getCartSize() {
-        return cartItems.size();
-    }
-
     public Set<MenuItem> getCartItems() {
         return cartItems.keySet();
     }
