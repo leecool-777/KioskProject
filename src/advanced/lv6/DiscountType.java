@@ -9,8 +9,8 @@ public enum DiscountType {
     ;
 
 
-    private String type;
-    private int discountPercent;
+    private final String type;
+    private final int discountPercent;
 
     //생성자
     DiscountType(String type, int discountPercent) {
