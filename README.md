@@ -1,6 +1,8 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6&height=300&text=[JAVA]%20Kiosk%20Project&fontSize=45&animation=twinkling&fontAlign=52&fontAlignY=36)
 
 # 📌키오스크 프로젝트
+&nbsp;
+
 
 ## 📚목차
 
@@ -35,13 +37,16 @@
 
 ### 5️⃣ 구현기능을 레벨 별로 구성한 구조입니다.
 
+&nbsp;
 
-
+&nbsp;
 # 🛠️개발 환경
 [![My Skills](https://skillicons.dev/icons?i=idea,java,github,git)](https://skillicons.dev)
 
 ![Static Badge](https://img.shields.io/badge/JDK-17.0.14-blue)
+&nbsp;
 
+&nbsp;
 
 # 📂디렉토리
 💡필수 구현 기능과 도전 기능 구현으로 패키지를 나누어 보았습니다. 각 해당 패키지는 레벨 별로 구성되어 있습니다.
@@ -95,8 +100,10 @@
                 Menu.java
                 MenuItem.java
 ```
+&nbsp;
+
 # 💡다이어그램 및 순서도
-## `📊순서도`
+### `📊순서도`
 ![KioskFlowChart.png](image/KioskFlowChart.png)
 ## `📋다이어그램`
 ![KioskDiagram.png](image/KioskDiagram.png)
