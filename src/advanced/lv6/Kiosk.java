@@ -109,6 +109,7 @@ public class Kiosk {
         return 0 < userChoiceItem && userChoiceItem <= selectedMenu.getListSize();
     }
 
+    //장바구니 추가 여부
     private void confirmAddItem(MenuItem selectedItem) {
         System.out.println("\n위 상품을 장바구니에 추가 하시겠습니까?");
         System.out.println("1. 확인           2. 취소");
